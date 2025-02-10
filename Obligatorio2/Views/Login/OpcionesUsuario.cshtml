@@ -1,0 +1,21 @@
+﻿
+<h1>Usted se ha logueado con el rol de @Context.Session.GetString("rol").ToUpper()</h1>
+<br />
+<br />
+
+@if (Context.Session.GetString("rol") == "admin")
+{
+    <a class="btn btn-primary" asp-controller="Eventos" asp-action="Index"> Gestion de eventos</a>
+    <br />
+    <br />
+}
+else
+{
+    <a class="btn btn-primary" asp-controller="Disciplinas" asp-action="Index"> Gestion de disciplinas</a>
+    <br /><br />
+    <a class="btn btn-primary" asp-controller="Atletas" asp-action="Index">Gestion de atletas</a>
+    <br />
+    <br />
+}
+
+<a asp-action="Logout" class="btn btn-danger">Cerrar sesion</a>

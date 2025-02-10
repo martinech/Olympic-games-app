@@ -1,0 +1,106 @@
+@model Obligatorio2.Models.EventosViewModel
+
+@{
+    ViewData["Title"] = "Detalle de Eventos";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+<h5>Buscar eventos por Id de disciplina</h5>
+<form asp-action="GetEventosPorDisciplina" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-4">
+                <input type="number" name="id" class="form-control" placeholder="Id de la disciplina..."/>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary">Buscar</button>            
+            </div>
+        </div>
+    </div>
+</form>
+<br>
+<h5>Buscar eventos por rango de fechas</h5>
+<form asp-action="GetEventosPorFechas" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-4">
+                <input type="date" name="fecha1" class="form-control" placeholder="Ingrese una fecha" />
+            </div>
+            <div class="col-4">
+                <input type="date" name="fecha2" class="form-control" placeholder="Ingrese otra fecha" />
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    </div>
+</form>
+<br>
+<h5>Buscar eventos por nombre</h5>
+<form asp-action="GetEventosPorNombre" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-4">
+                <input type="text" name="nombre" class="form-control" placeholder="Nombre del evento..." />
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    </div>
+</form>
+<br>
+<h5>Buscar eventos por rango de puntajes</h5>
+<form asp-action="GetEventosPorPuntajes" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-4">
+                <input type="number" name="puntaje1" class="form-control" placeholder="Ingrese un puntaje" />
+            </div>
+            <div class="col-4">
+                <input type="number" name="puntaje2" class="form-control" placeholder="Ingrese otro puntaje" />
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary">Buscar</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha inicio</th>
+            <th>Fecha finalización</th>
+            <th>Disciplina</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var evento in Model.Eventos)
+        {
+            <tr>
+                <td>@evento.Id</td>
+                <td>@evento.Nombre</td>
+                <td>@evento.Disciplina</td>
+                <td>@evento.FechaInicio</td>
+                <td>@evento.FechaFin</td>
+                <td>@evento.Disciplina</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Login" asp-action="OpcionesUsuario" class="btn btn-secondary">Volver</a>
+<a  asp-controller="Login" asp-action="Logout" class="btn btn-danger">Cerrar sesion</a>

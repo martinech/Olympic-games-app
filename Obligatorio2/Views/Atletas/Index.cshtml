@@ -1,0 +1,55 @@
+@model Obligatorio2.Models.AtletasViewModel
+
+@{
+    ViewData["Title"] = "Obtener atletas por disciplina";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<br />
+<h5>Buscar atleas por Id de disciplina</h5>
+<form asp-action="GetAtletasPorDisciplina" method="post">
+    <div class="form-group">
+        <div class="row">
+            <div class="col-4">
+                <input type="number" name="id" class="form-control" placeholder="Id de la disciplina..."/>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary">Buscar</button>            
+            </div>
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped mt-4">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Sexo</th>
+            <th>País</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var atleta in Model.Atletas)
+        {
+            <tr>
+                <td>@atleta.Id</td>
+                <td>@atleta.Nombre</td>
+                <td>@atleta.Apellido</td>
+                <td>@atleta.Sexo</td>
+                <td>@atleta.Pais</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a asp-controller="Login" asp-action="OpcionesUsuario" class="btn btn-secondary">Volver</a>
+<a asp-controller="Login" asp-action="Logout" class="btn btn-danger">Cerrar sesion</a>
