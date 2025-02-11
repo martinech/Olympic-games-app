@@ -7,7 +7,7 @@ More specifically, this app let's the user register, login and depending on weth
 This application was developed as an assignment for **Programación 3** at **ORT University**.
 
 ## 🚀 Features
-- Feature 1: JWT Authorized Login and different responsabilities assigned based on user's status.
+- Feature 1: JWT Authorized Login and different responsabilities assigned based on user's role (admin/scorer).
 - Feature 2: The scorer is able to asign a sport discipline to an athlete.
 - Feature 3: Disciplines are able to be created taking into account the required validations.
 - Feature 4: Disciplines are listed alphabetically in ascending order.
