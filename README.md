@@ -52,8 +52,9 @@ Olympic-games-app/
    ```
 2. Build DataBase:
    ```sh
-   Run 'Add-Migration NewMigration' in Package Manager Console
-   Then update-database
+   From VS Code:
+      Run 'Add-Migration NewMigration' in Package Manager Console
+      Then update-database
    ```
 3. Check connection string:
    ```sh
@@ -64,7 +65,7 @@ Olympic-games-app/
    Debug and run
    ```
 
-## 👨‍💻 Contributor
+## 👨‍💻 Contributors
 This project was developed in collaboration with **Pablo Rodriguez** as part of the **Programación 3** course at **ORT University**.
 
 ## 📄 License
@@ -72,7 +73,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 📬 Contact
 For questions or feedback, feel free to reach out:
-- **Email:** [your-email@example.com]
+- **Email:** martin.echenique@hotmail.com
 - **GitHub Issues:** Open an issue on the repository
 
 ---
