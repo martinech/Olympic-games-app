@@ -32,17 +32,21 @@ This application was developed as an assignment for **Programación 3** at **ORT
 ## 📂 Project Structure
 ```
 Olympic-games-app/
-├── AccesoADatos/
-├── Dto/
-├── LogicaDeAplicacion
-├── LogicaDeNegocio
-├── WebAPI
-├── WebMVC
-├── Obligatorio.sln
-├── DatosSeed.sql
-├── README.md
+├── Obligatorio2/
+|   ├──Controllers/
+|   ├──Models/
+|   ├──Properties/
+|   ├──Views/
+|   ├──wwwroot/
+|   ├──Obligatorio2.csproj
+|   ├──Program.cs
+|   ├──appsettings.Development.json
+|   ├──appsettings.json
 ├── .gitattributes
-└── .gitignore
+├── .gitignore
+├── LICENSE
+├── Obligatorio2.sln
+└── README.md
 ```
 
 ## 🚀 Installation & Setup
