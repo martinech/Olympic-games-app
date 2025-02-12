@@ -31,30 +31,37 @@ This application was developed as an assignment for **Programación 3** at **ORT
 ## 📂 Project Structure
 ```
 Olympic-games-app/
-├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── utils/
-├── public/
-├── package.json
+├── AccesoADatos/
+├── Dto/
+├── LogicaDeAplicacion
+├── LogicaDeNegocio
+├── WebAPI
+├── WebMVC
+├── Obligatorio.sln
+├── DatosSeed.sql
 ├── README.md
+├── .gitattributes
 └── .gitignore
 ```
 
 ## 🚀 Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/martinech/Olympic-games-app.git
+   git clone https://github.com/martinech/Olympic-games-app
    cd Olympic-games-app
    ```
-2. Install dependencies:
+2. Build DataBase:
    ```sh
-   npm install
+   Run 'Add-Migration NewMigration' in Package Manager Console
+   Then update-database
    ```
-3. Start the application:
+3. Check connection string:
    ```sh
-   npm start
+   Make sure the connection string in appsettings.json points to the correct server
+   ```
+4. Run app:
+   ```sh
+   Debug and run
    ```
 
 ## 👨‍💻 Contributor
